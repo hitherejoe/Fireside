@@ -17,9 +17,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ChatActivity" />
-        <activity android:name=".FaqActivity" />
-
     </application>
 
 </manifest>
