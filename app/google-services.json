@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1023268904696",
+    "firebase_url": "https://fireside-588d9.firebaseio.com",
+    "project_id": "fireside-588d9",
+    "storage_bucket": "fireside-588d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023268904696:android:de9ab15cf0048ff6",
+        "android_client_info": {
+          "package_name": "co.joebirch.fireside"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023268904696-bdld14l6d3h6q2m20cebo537qf7bjlqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.joebirch.fireside",
+            "certificate_hash": "9bdad3c0506ee852a12bceb61e0d46bd0f380c0c"
+          }
+        },
+        {
+          "client_id": "1023268904696-4q08gc9nfcpijiqbuqhb2a1bodcockca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBij29hgC61PSzWwJwjUXWh6DECKl7hiDk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023268904696-4q08gc9nfcpijiqbuqhb2a1bodcockca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
