@@ -2,9 +2,12 @@ package co.joebirch.fireside;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         shouldShowChatActivity = firebaseRemoteConfig.getBoolean(PARAMETER_SHOULD_SHOW_CHAT);
 
         setupHelpButton();
+        retrieveValues();
     }
 
     private void setupHelpButton() {
@@ -42,6 +46,19 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     startFaqActivity();
                 }
+            }
+        });
+    }
+
+    private void retrieveValues() {
+        firebaseRemoteConfig.fetch().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    firebaseRemoteConfig.activateFetched();
+                }
+                shouldShowChatActivity = firebaseRemoteConfig.getBoolean(
+                        PARAMETER_SHOULD_SHOW_CHAT);
             }
         });
     }
